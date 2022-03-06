@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="220dp"
         android:padding="36dp">
 
 
@@ -22,7 +22,7 @@
             android:hint="@string/name">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_first_name"
+                android:id="@+id/edit_text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
@@ -38,7 +38,7 @@
             android:hint="@string/username">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_last_name"
+                android:id="@+id/edit_text_user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"

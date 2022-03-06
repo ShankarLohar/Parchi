@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "498475949045",
+    "firebase_url": "https://shankar-parchi-default-rtdb.firebaseio.com",
+    "project_id": "shankar-parchi",
+    "storage_bucket": "shankar-parchi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498475949045:android:58a91605fe30885baedebc",
+        "android_client_info": {
+          "package_name": "com.shankarlohar.parchi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498475949045-s9mngrjts7pu49vkrfoalnq23rq6jb6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE0iXHjdTlcMafqb2bNrRBlkkUOY-RBtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498475949045-s9mngrjts7pu49vkrfoalnq23rq6jb6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
