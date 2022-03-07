@@ -23,6 +23,7 @@ class BottomNavActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityBottomNavBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,21 +36,9 @@ class BottomNavActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_bottom_nav)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_search, R.id.navigation_book, R.id.navigation_my_tickets))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        alert = AlertDialog.Builder(this).create()
-        alert.setTitle("Logout")
-        alert.setMessage("Please wait while we log you out from Parchi...")
-        alert.setCanceledOnTouchOutside(false)
-
-        auth = FirebaseAuth.getInstance()
-
 
         toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.open, R.string.close)
         binding.drawer.addDrawerListener(toggle)
@@ -83,6 +72,11 @@ class BottomNavActivity : AppCompatActivity() {
     }
 
     private fun logoutFirebase() {
+        alert = AlertDialog.Builder(this).create()
+        alert.setTitle("Logout")
+        alert.setMessage("Please wait while we log you out from Parchi...")
+        alert.setCanceledOnTouchOutside(false)
+        auth = FirebaseAuth.getInstance()
         alert.show()
         auth.signOut()
         startActivity(Intent(this, LoginActivity::class.java))

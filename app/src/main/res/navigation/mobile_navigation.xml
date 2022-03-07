@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_search">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.shankarlohar.parchi.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_search"
+        android:name="com.shankarlohar.parchi.fragments.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_book" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.shankarlohar.parchi.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_book"
+        android:name="com.shankarlohar.parchi.fragments.BookFragment"
+        android:label="@string/book"
+        tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.shankarlohar.parchi.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_my_tickets"
+        android:name="com.shankarlohar.parchi.fragments.MyTicketsFragment"
+        android:label="@string/my_tickets"
+        tools:layout="@layout/fragment_tickets" />
 </navigation>

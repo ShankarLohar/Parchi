@@ -37,4 +37,5 @@
     <string name="book">Book</string>
     <string name="search">Search</string>
     <string name="app_title">Parchi</string>
+    <string name="my_tickets">My Tickets</string>
 </resources>
