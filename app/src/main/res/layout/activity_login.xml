@@ -48,6 +48,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:text="Forgot Password?"/>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_login"
             style="@style/Widget.AppCompat.Button.Colored"
@@ -64,6 +72,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/don_t_have_an_account_sign_up"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_with_google_button"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 

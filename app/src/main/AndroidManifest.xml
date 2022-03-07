@@ -11,8 +11,13 @@
         android:theme="@style/Theme.Parchi">
         <activity
             android:name=".BottomNavActivity"
+            android:parentActivityName=".LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_bottom_nav" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:parentActivityName=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".SignupActivity"
             android:exported="false"
