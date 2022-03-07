@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/parchi_background"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:src="@color/white"
+        android:layout_margin="30dp"
+        android:layout_height="70dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_display"
+        android:padding="8dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20sp"
+        tools:text = "Shankar Lohar"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginStart="30dp"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="shankarlohar@parchi.in"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_marginTop="30dp"/>
+
+
+</LinearLayout>
