@@ -34,4 +34,7 @@
     <string name="github">Github</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="book">Book</string>
+    <string name="search">Search</string>
+    <string name="app_title">Parchi</string>
 </resources>

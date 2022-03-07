@@ -1,21 +1,26 @@
 package com.shankarlohar.parchi
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.shankarlohar.parchi.databinding.ActivityBottomNavBinding
 
 class BottomNavActivity : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
-
+    private lateinit var alert: AlertDialog
+    private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityBottomNavBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +28,7 @@ class BottomNavActivity : AppCompatActivity() {
 
         binding = ActivityBottomNavBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.title = getString(R.string.app_title)
 
         val navView: BottomNavigationView = binding.navView
 
@@ -38,16 +43,27 @@ class BottomNavActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        alert = AlertDialog.Builder(this).create()
+        alert.setTitle("Logout")
+        alert.setMessage("Please wait while we log you out from Parchi...")
+        alert.setCanceledOnTouchOutside(false)
 
-        toggle = ActionBarDrawerToggle(this,binding.drawer,R.string.open,R.string.close)
+        auth = FirebaseAuth.getInstance()
+
+
+        toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.open, R.string.close)
         binding.drawer.addDrawerListener(toggle)
         toggle.syncState()
 
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         binding.drawerView.setNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.visit_history -> Toast.makeText(this,"Visit history coming soon...",Toast.LENGTH_LONG).show()
+            when (it.itemId) {
+                R.id.visit_history -> Toast.makeText(
+                    this,
+                    "Visit history coming soon...",
+                    Toast.LENGTH_LONG
+                ).show()
                 R.id.logout -> logoutFirebase()
                 R.id.githubrepo -> redirectToGithubRepo()
             }
@@ -61,11 +77,15 @@ class BottomNavActivity : AppCompatActivity() {
     }
 
     private fun redirectToGithubRepo() {
-        Toast.makeText(this,"doing...",Toast.LENGTH_LONG).show()
+        val openURL = Intent(Intent.ACTION_VIEW)
+        openURL.data = Uri.parse("https://github.com/ShankarLohar/Parchi")
+        startActivity(openURL)
     }
 
     private fun logoutFirebase() {
-        Toast.makeText(this,"doing this too...",Toast.LENGTH_LONG).show()
+        alert.show()
+        auth.signOut()
+        startActivity(Intent(this, LoginActivity::class.java))
     }
 
 }

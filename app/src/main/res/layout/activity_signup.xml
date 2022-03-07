@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/parchi_signup"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/parchi_signup">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
         android:orientation="vertical"
-        android:layout_marginTop="220dp"
         android:padding="36dp">
 
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_box"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/parchi_profile_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/name_box"
+            android:layout_marginStart="180dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/name">
+            android:hint="@string/name"
+            app:layout_constraintTop_toBottomOf="@id/image_box">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_name"
@@ -31,11 +43,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/username">
+            android:hint="@string/username"
+            app:layout_constraintTop_toBottomOf="@id/name_box">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_user_name"
@@ -47,11 +61,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="12dp"
-            android:hint="@string/email">
+            android:hint="@string/email"
+            app:layout_constraintTop_toBottomOf="@id/username_box">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_email"
@@ -63,11 +79,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="12dp"
-            android:hint="@string/phone">
+            android:hint="@string/phone"
+            app:layout_constraintTop_toBottomOf="@id/email_box">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_phone"
@@ -80,12 +98,14 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="12dp"
-            app:passwordToggleEnabled="true"
-            android:hint="@string/password">
+            android:hint="@string/password"
+            app:layout_constraintTop_toBottomOf="@id/phone_box"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_set_password"
@@ -97,12 +117,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirm_box"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="12dp"
-            app:passwordToggleEnabled="true"
-            android:hint="@string/confirm_password">
+            android:hint="@string/confirm_password"
+            app:layout_constraintTop_toBottomOf="@id/password_box"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_set_confirm_password"
@@ -117,12 +139,15 @@
             android:id="@+id/button_create_account"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Sign Up" />
+            android:text="Sign Up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirm_box" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>
