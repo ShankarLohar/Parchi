@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_bottom_nav.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_bottom_nav.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_forgot_password.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/content_nav_drawer.xml" value="0.209375" />
-        <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/drawer_header.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/drawer_header.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/fragment_book.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/fragment_dashboard.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/Parchi/app/src/main/res/layout/fragment_home.xml" value="0.209375" />

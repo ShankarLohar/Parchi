@@ -38,4 +38,7 @@
     <string name="search">Search</string>
     <string name="app_title">Parchi</string>
     <string name="my_tickets">My Tickets</string>
+    <string name="temp_man">Temp Man</string>
+    <string name="tempmail_parchi_in">tempmail@parchi.in</string>
+    <string name="_8787878787">8787878787</string>
 </resources>

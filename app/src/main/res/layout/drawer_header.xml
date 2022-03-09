@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/parchi_background"
-    android:orientation="vertical">
+    >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_profile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/parchi_profile_avatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,39 +23,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:padding="8dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/user_profile"
-        tools:text="Shankar Lohar" />
+        android:text="@string/temp_man" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/user_email_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:padding="8dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_name_display"
-        tools:text="shankarlohar@parchi.in" />
+        android:text="@string/tempmail_parchi_in" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/user_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:padding="8dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_email_display"
-        tools:text="8787878787" />
+        android:text="@string/_8787878787" />
 
     <View
         app:layout_constraintTop_toBottomOf="@id/user_phone"
