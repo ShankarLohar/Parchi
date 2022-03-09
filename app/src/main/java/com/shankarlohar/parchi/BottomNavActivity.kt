@@ -56,7 +56,13 @@ class BottomNavActivity : AppCompatActivity(){
                 else -> false
             }
         }
+        setUpUserData()
 }
+
+    private fun setUpUserData() {
+
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toggle.onOptionsItemSelected(item)) return true
         return super.onOptionsItemSelected(item)

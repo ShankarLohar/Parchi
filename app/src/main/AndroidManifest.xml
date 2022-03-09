@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Parchi" >
         <activity
-            android:name=".NavDrawerActivity"
-            android:exported="false"
-            android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/Theme.Parchi.NoActionBar" />
+            android:name=".SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".BottomNavActivity"
             android:exported="false"
@@ -29,13 +34,7 @@
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
